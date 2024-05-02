@@ -1,0 +1,54 @@
+<form action = "go" method = "post">
+   {% csrf_token %}
+   Enter name:
+    <input type="text" name="bname">
+    <br>
+    Select Turf:
+    <select name="option">
+        <option value="AIM Turf, Kandivali" >AIM Turf, Kandivali</option>
+        <option value="Urban Sports Zone, Juhu">Urban Sports Zone, Juhu</option>
+        <option value="Sakar Turf Ground, Panvel">Sakar Turf Ground, Panvel</option>
+        <option value="Skyturf, BKC">Skyturf, BKC</option>
+        <option value="Emma Sports Academy, Powai">Emma Sports Academy, Powai</option>
+        <option value="Players Turf, Goregaon">Players Turf, Goregaon</option>
+        <option value="Pavilion Sports Arena, Thane">Pavilion Sports Arena, Thane</option>
+        <option value="Vihana Sports, Malad">Vihana Sports, Malad</option>
+        <option value="Urban Sports, Wadala">Urban Sports, Wadala</option>
+        <option value="Sporting Lions, Bandra">Sporting Lions, Bandra</option>
+    </select>
+    <br>
+    Number of people (up to 10):
+    <input list="numberList" name="number">
+      <datalist id="numberList">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+        <option value="6">
+        <option value="7">
+        <option value="8">
+        <option value="9">
+        <option value="10">
+      </datalist>
+    <br>
+    Select time:
+    <select name="btime">
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+    </select>
+    <br>
+    Select date:
+    <input type="date" name="bdate">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>

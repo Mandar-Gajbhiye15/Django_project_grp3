@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Check your booking</h1>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>{{ record.5 }}</td>
+            </tr>
+            <tr>
+                <td>Turf</td>
+                <td>{{ record.1 }}</td>
+            </tr>
+            <tr>
+                <td>No. of People</td>
+                <td>{{ record.2 }}</td>
+            </tr>
+            <tr>
+                <td>Booking Time</td>
+                <td>{{ record.3 }}</td>
+            </tr>
+            <tr>
+                <td>Booking Date</td>
+                <td>{{ record.4 }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
