@@ -1,19 +1,93 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<h1>Welcome to Turf Booking Page</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Book your turf anytime anywhere.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<button onclick="window.location.href='http://127.0.0.1:8000/admin'">Login</button>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
 <!--<!DOCTYPE html>-->
 <!--<html>-->
 <!--<body>-->
+
 <!--<h1>Welcome to Turf Booking Page</h1>-->
 <!--<p>Book your turf anytime anywhere.</p>-->
-<!--<button onclick="window.location.href='http://127.0.0.1:8000/admin'">Login</button>-->
+<!--<a href="http://127.0.0.1:8000/BookSlot">books</a>-->
+<!--<a href="http://127.0.0.1:8000/CheckBooking">check booking</a>-->
 <!--</body>-->
 <!--</html>-->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #A2E353;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-family : Georgia, serif ;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #030500;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #A2E353;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
 <body>
 
-<h1>Welcome to Turf Booking Page</h1>
-<p>Book your turf anytime anywhere.</p>
-<a href="http://127.0.0.1:8000/BookSlot">books</a>
-<a href="http://127.0.0.1:8000/CheckBooking">check booking</a>
+<div class="header">
+    <h1>S.M.Vita Turf Booking </h1>
+</div>
+
+<div class="container">
+    <h2 >Welcome to Turf Booking Page</h2>
+    <p>Book your turf anytime anywhere.</p>
+    <a href="http://127.0.0.1:8000/BookSlot">Book Now</a>
+    <a href="http://127.0.0.1:8000/CheckBooking">Check Booking</a>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Turf Booking. All rights reserved.</p>
+</div>
+
 </body>
 </html>
