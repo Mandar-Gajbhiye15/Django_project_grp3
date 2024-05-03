@@ -9,6 +9,7 @@ import mysql.connector as m
 mydatabase=m.connect(host="localhost",user="root",password="rootsql123",database="turfBS")
 query1="insert into turf_users(turf,nopeople,btime,bdate,bname) values(%s,%s,%s,%s,%s)"         #  must be "s"
 query2="SELECT * FROM turf_users WHERE bname = %s"
+query3 = "select * from turf_users"
 cursor=mydatabase.cursor()
 
 # Create your views here.
@@ -28,21 +29,26 @@ def result(request):
 def BookSlot(request):
     return render(request, 'form.html')
 
+#def CheckBooking(request):
+    # if request.method == 'GET':
+    #     username = request.POST.get('bname')
+    #     print("Username from form:", username)
+    #     query2 = "SELECT * FROM turf_users WHERE bname = %s"
+    #     print("Query:", query2)
+    #     cursor.execute(query2, (username,))
+    #     record = cursor.fetchone()
+    #     print("Fetched record:", record)
+    #     context = {'record': record}
+    #     return render(request, 'check.html', context)
+    # else:
+    #     return HttpResponse("Invalid request method")
+
+
 def CheckBooking(request):
-    if request.method == 'GET':
-        username = request.POST.get('bname')
-        print("Username from form:", username)
-        query2 = "SELECT * FROM turf_users WHERE bname = %s"
-        print("Query:", query2)
-        cursor.execute(query2, (username,))
-        record = cursor.fetchone()
-        print("Fetched record:", record)
-        context = {'record': record}
-        return render(request, 'check.html', context)
-    else:
-        return HttpResponse("Invalid request method")
-
-
+    cursor.execute(query3)
+    record = cursor.fetchone()
+    context = {'record': record}
+    return render(request,'check.html', context)
 
 def login(request):
     return render(request, 'check.html')
